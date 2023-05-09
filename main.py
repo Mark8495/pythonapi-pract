@@ -17,8 +17,8 @@ def get_posts():
     return{"Data" : "This is your posts"}
 
 @app.get("/createposts")
-def create_posts(payLoad: dict = Body(...)):
-    return{"new_post" : f"title {payLoad['title']} content: {payLoad['content']}"}
+def create_posts(new_post: Post):
+    return{"data": "new post"}
 
 
 
